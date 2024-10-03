@@ -8,7 +8,8 @@
 // classes are used to organize our code
 //Every Java program should have at least one class that contains the main function
 
-// In Java , all the classes and methods should have an access modifier. Wich is a keyword that determines if other classes or methods can access these classes and methods
+// In Java , all the classes and methods should have an access modifier. Wich is a keyword that determines if other classes or methods can access these classes and methods. 
+//An example of a class modifier is the public and private keyword
 
 //naming classes with Pascal is a convention, 
 //naming methods in camelCase is also a convention;
