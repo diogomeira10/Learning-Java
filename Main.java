@@ -14,7 +14,11 @@
 //naming methods in camelCase is also a convention;
 
 public class Main { //this is the class
-    public void main() { // main function
-
+    public static void main(String[] args) { // main function
+        System.out.println("Hello, World!");
     }
 }
+
+//public means the method can be access anywhere
+// static means the method can be called without the need of creating an instance of the the class.
+//void means it does not return any value. The purpose of the main method is to make the program run and perform tasks. The main method is the starting point of the program so it does not need to return any value
