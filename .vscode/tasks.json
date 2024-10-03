@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "compile java",
+            "type": "shell",
+            "command": "javac",
+            "args": [
+                "${file}" //"*.java"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$javac"],
+            "detail": "Generated task by Java Extension Pack"
+        }
+    ]
+}
