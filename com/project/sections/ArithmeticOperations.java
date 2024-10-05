@@ -12,5 +12,16 @@ public class ArithmeticOperations {
         System.out.println(y); // 3
 
         //The order of operations are : multiplications/divisions -> sums/subtractions
+
+        String number = "1";
+        int stringToNumber = Integer.parseInt(number);
+        System.out.println(stringToNumber);
+
+
+        //The Math Class and Explicit Casting
+        //Java converts a smaller type into a larger type size automatically, the contrary is only possible by using explicit Casting
+        int randomNumber = (int)Math.round(Math.random() * 100); // generates a number between 0 and 100
+        System.out.println(randomNumber);
+
     }
 }
