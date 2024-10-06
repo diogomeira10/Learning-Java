@@ -14,28 +14,27 @@ public class MortgageCalculator {
         System.out.print("Principal: ");
         int principal = scanner.nextInt();
 
+
         System.out.print("Annual Interest Rate: ");
         float annualInterestRate = scanner.nextFloat();
 
+
         System.out.print("Period (Years): ");
-        byte period = scanner.nextByte();
-
-
+        int period = scanner.nextByte();
+        
+        scanner.close();
+        
+        float monthlyInterestRate = (annualInterestRate / 100) / 12;
+        
         int months = period * 12;
 
-        float amountToPay = principal + (principal * annualInterestRate/100);
+        double mortgagePayment = principal * 
+        (monthlyInterestRate * Math.pow(1 + monthlyInterestRate, months)) / 
+        (Math.pow(1 + monthlyInterestRate, months) - 1);
 
-        double MortgagePayment = amountToPay / months;
-
-        String inCurrency = currency.format(MortgagePayment);
-
-        
-
+        String inCurrency = currency.format(mortgagePayment);
 
         System.out.println("You're monthly payment is: " + inCurrency);
-
-
-        scanner.close();
 
     }
 }
