@@ -10,13 +10,37 @@ public class MortgageCalculator {
         Scanner scanner = new Scanner(System.in);
         NumberFormat currency = NumberFormat.getCurrencyInstance();
 
+        int principal;
 
-        System.out.print("Principal: ");
-        int principal = scanner.nextInt();
+        while (true) {
+            System.out.print("Principal ($1K - $1M): ");
+            principal = scanner.nextInt();
+            boolean isInRange = principal > 1000 && principal <= 1_000_000;
+            if(!isInRange) {
+                System.out.println("Please enter a number between 1,000 and 1,000,000");
+                continue;
+            } else {
+                break;
+            }
+
+        }
+
+        float annualInterestRate ;
+
+        while (true) {
+            System.out.print("Annual Interest Rate: ");
+            annualInterestRate = scanner.nextFloat();
+            boolean isInRange = annualInterestRate > 0 && annualInterestRate <= 4;
+            if (isInRange) {
+                break;
+            } else{
+                System.out.println("Please enter a number bigger than 0 and smaller or equal to 4");
+                continue;
+            }
+            
+        }
 
 
-        System.out.print("Annual Interest Rate: ");
-        float annualInterestRate = scanner.nextFloat();
 
 
         System.out.print("Period (Years): ");
@@ -34,7 +58,7 @@ public class MortgageCalculator {
 
         String inCurrency = currency.format(mortgagePayment);
 
-        System.out.println("You're monthly payment is: " + inCurrency);
+        System.out.println("Your monthly payment is: " + inCurrency);
 
     }
 }
